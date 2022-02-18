@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap");
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  background-image: url("./img/wickedbackground.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-container::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #838d8d;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0;
+  position: relative;
+  max-width: 100%;
+  width: 30vw;
+}
+
+#progress {
+  position: absolute;
+  background-color: #FFC300;
+  z-index: -1;
+  height: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0%;
+  transition: 400ms;
+}
+
+.circle {
+  background-color: #fff;
+  color: #6B9080;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #838d8d;
+  transition: 700ms;
+}
+
+.circle.active {
+  border: 3px solid #FFC300;;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #6B9080;
+  border: none;
+  color: #fff;
+  margin: 10px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: 0.6s;
+}
+
+button:disabled, button:hover:disabled {
+  background-color: #c2c9c9;
+  cursor: default;
+}
+
+button:hover {
+  background-color: #FFC300;
+  cursor: pointer;
+}
